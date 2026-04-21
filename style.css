@@ -63,19 +63,18 @@ header {
     text-align: center;
 }
 
+.site-title a,
+.site-title a:visited {
+    text-decoration: none;
+    color: #2760D1;
+}
+
 header h1 {
     margin: 0;
     font-family:  UnifrakturMaguntia, cursive;
     font-size: 32px;
     font-weight: 700;
     color: #2760D1;
-}
-.user-links {
-    font-size: 14px;
-    justify-content: flex-end;
-    display: flex;
-    gap: 12px;
-    align-self: center;
 }
 
 .edition-link,
@@ -112,15 +111,14 @@ header h1 {
 }
 
 .user-links {
+    font-size: 14px;
     justify-self: end;
+    justify-content: flex-end;
     display: flex;
     gap: 12px;
+    align-self: center;
 }
 
-.user-links a {
-    text-decoration: none;
-    color: black;
-}
 
 nav ul {
     display: flex;
@@ -133,6 +131,11 @@ nav ul {
 
 nav a {
     text-decoration: none;
+    color: black;
+}
+
+nav a:hover {
+    text-decoration: underline;
     color: black;
 }
 
@@ -158,15 +161,29 @@ nav a {
     grid-column: 1/2;
 }
 
+.hero h2,
 .latest-news h2,
-.trending-stories h2 {
+.trending-stories h2,
+.more-news h2 {
     margin-top: 0;
 }
 
+.hero h2 a,
 .latest-news h3 a,
-.trending-stories h3 a {
+.trending-stories h3 a,
+.news-card h3 a,
+.cards h3 a {
     text-decoration: none;
-    color: black;
+    color: #191a1d;
+}
+
+.hero h2 a:hover,
+.latest-news h3 a:hover,
+.trending-stories h3 a:hover,
+.news-card h3 a:hover,
+.cards h3 a:hover {
+    text-decoration: underline;
+    color: #191a1d;
 }
 .published-time {
     font-size: 13px;
@@ -243,6 +260,17 @@ nav a {
     color: grey;
 }
 
+.topic a,
+.topic a:visited {
+    text-decoration: none;
+    color: grey;
+}
+
+.topic a:hover {
+    text-decoration: underline;
+    color: grey;
+}
+
 .latest-news article,
 .trending-stories article,
 .cards article {
@@ -279,6 +307,15 @@ footer {
 
     .news-layout {
         grid-template-columns: 1fr;
+    }
+
+    .hero,
+    .ad-box,
+    .latest-news,
+    .trending-stories,
+    .news-grid {
+        grid-column: auto;
+        grid-row: auto;
     }
 
     .news-grid {
