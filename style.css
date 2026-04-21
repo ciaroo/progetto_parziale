@@ -138,18 +138,54 @@ nav a {
 
 .top-news {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     margin-bottom: 10px;
 }
 
 .news-layout {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
+    align-items: start;
+}
+
+.latest-news {
+    grid-column: 1/2;
+}
+
+.trending-stories {
+    grid-column: 1/2;
+}
+
+.latest-news h2,
+.trending-stories h2 {
+    margin-top: 0;
+}
+
+.latest-news h3 a,
+.trending-stories h3 a {
+    text-decoration: none;
+    color: black;
+}
+.published-time {
+    font-size: 13px;
+    color: grey;
+    margin-top: 5px;
+}
+.more-latest-news {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #2760D1;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .news-grid {
+    grid-column: 2/4;
+    grid-row: 1 / span 2;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
@@ -163,8 +199,13 @@ nav a {
     gap: 20px;
 }
 
+.hero{
+    grid-column: 1/3;
+}
+
 .hero,
 .latest-news,
+.trending-stories,
 .more-news {
     background-color: white;
     padding: 20px;
@@ -183,6 +224,7 @@ nav a {
 }
 
 .ad-box {
+    grid-column: 3/4;
     background-color: #dfe1e5;
     min-height: 300px;
     margin-bottom: 20px;
@@ -202,6 +244,7 @@ nav a {
 }
 
 .latest-news article,
+.trending-stories article,
 .cards article {
     margin-bottom: 20px;
 }
