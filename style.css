@@ -58,6 +58,11 @@ header {
     align-self: center;
 }
 
+.edition-link:hover {
+    text-decoration: underline;
+    color: black;
+}
+
 .site-title {
     justify-content: center;
     text-align: center;
@@ -283,22 +288,76 @@ footer {
     text-align: center;
 }
 
+@media (max-width: 970px) {
+    .top-news {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero {
+        grid-column: 1 / 2;
+    }
+
+    .ad-box {
+        grid-column: 2 / 3;
+    }
+
+    .news-layout {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .latest-news,
+    .trending-stories,
+    .news-grid {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .news-grid {
+        grid-column: 1 / 3;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 @media (max-width: 700px) {
-    .header-top,
-    .header-bottom {
-        grid-template-columns: 1fr;
+    .header-top{
+        grid-template-columns: auto 1fr auto;
         gap: 10px;
-        text-align: center;
+        text-align: left;
     }
 
-    .edition-link,
-    .search-link,
+    .edition-link {
+        justify-self: start;
+        font-size: 0;
+        position: relative;
+        width: 24px;
+        height: 24px;
+    }
+
+    .edition-link::before {
+        content: "⌕";
+        font-size: 24px;
+        color: black;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .site-title {
+        justify-content: flex-start;
+        text-align: left;
+    }
+
     .user-links {
-        justify-self: center;
+        justify-self: end;
     }
 
-    nav ul {
-        flex-direction: column;
+    .header-bottom {
+        display: none;
     }
 
     .top-news {
@@ -323,6 +382,6 @@ footer {
     }
 
     .cards {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 }
