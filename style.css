@@ -22,6 +22,91 @@ img {
     display: block;
 }
 
+/* Menu laterale */
+.menu-toggle {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1500;
+    background-color: transparent;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.side-menu {
+    position: fixed;
+    top: 98px;
+    left: 0;
+    z-index: 1600;
+    width: 400px;
+    height: calc(100vh - 98px);
+    padding: 28px;
+    background-color: white;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+}
+
+.menu-toggle:checked ~ .menu-overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.menu-toggle:checked ~ .side-menu {
+    transform: translateX(0);
+}
+
+.side-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+    padding: 14px;
+    background-color: #f5f6fa;
+    color: #191a1d;
+    font-size: 16px;
+}
+
+.side-nav ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.side-nav li {
+    margin-bottom: 14px;
+}
+
+.side-nav a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #191a1d;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.8;
+}
+
+.side-nav a:hover {
+    text-decoration: none;
+}
+
+.side-separator {
+    height: 1px;
+    margin: 22px 0;
+    background-color: #e5e7eb;
+}
+
+.side-nav .featured-link {
+    color: #58647f;
+}
+
 /* Header */
 header {
     position: sticky;
@@ -55,6 +140,10 @@ header {
 .edition-link {
     justify-content: flex-start;
     color: black;
+}
+
+.mobile-search-toggle {
+    display: none;
 }
 
 .site-title {
@@ -94,6 +183,7 @@ header h1 {
     justify-self: start;
     font-size: 24px;
     color: black;
+    cursor: pointer;
 }
 
 .weather {
@@ -317,21 +407,18 @@ footer {
     }
 
     .edition-link {
-        justify-self: start;
-        width: 24px;
-        height: 24px;
-        font-size: 0;
-        position: relative;
+        display: none;
     }
 
-    .edition-link::before {
-        content: "⌕";
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
+    .mobile-search-toggle {
+        display: flex;
+        justify-self: start;
+        align-items: center;
+        width: 24px;
+        height: 24px;
         font-size: 24px;
         color: black;
+        cursor: pointer;
     }
 
     .site-title {
@@ -345,6 +432,22 @@ footer {
 
     .header-bottom {
         display: none;
+    }
+
+    .side-menu {
+        top: 53px;
+        width: 100vw;
+        height: calc(100vh - 53px);
+        padding: 20px;
+    }
+
+    .side-search,
+    .side-nav a {
+        font-size: 15px;
+    }
+
+    .side-nav li {
+        margin-bottom: 12px;
     }
 
     main {

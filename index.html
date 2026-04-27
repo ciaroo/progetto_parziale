@@ -11,9 +11,56 @@
 </head>
 <body>
 
+<input type="checkbox" id="menu-toggle" class="menu-toggle">
+<label for="menu-toggle" class="menu-overlay"></label>
+
+<aside class="side-menu" aria-label="Menu di navigazione">
+    <div class="side-search">
+        <span>Search</span>
+        <span aria-hidden="true">⌕</span>
+    </div>
+
+    <nav class="side-nav" aria-label="Navigazione principale">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Customer Service <span aria-hidden="true">⌄</span></a></li>
+            <li><a href="#">Stay Connected <span aria-hidden="true">⌄</span></a></li>
+            <li><a href="#">Read today's Edition</a></li>
+            <li class="side-separator"></li>
+            <li><a href="#">News <span aria-hidden="true">⌄</span></a></li>
+            <li><a href="#">Sports <span aria-hidden="true">⌄</span></a></li>
+            <li><a href="#">Politics <span aria-hidden="true">⌄</span></a></li>
+            <li><a href="#">Business <span aria-hidden="true">⌄</span></a></li>
+            <li><a href="#">Living &amp; Entertainment <span aria-hidden="true">⌄</span></a></li>
+            <li><a href="#">Opinion <span aria-hidden="true">⌄</span></a></li>
+            <li><a href="#">Obituaries <span aria-hidden="true">⌄</span></a></li>
+            <li><a href="#">Video</a></li>
+            <li class="side-separator"></li>
+            <li><a href="#">Guides <span aria-hidden="true">⌄</span></a></li>
+            <li><a href="#">Shopping/Reviews <span aria-hidden="true">⌄</span></a></li>
+            <li><a href="#">Deals &amp; Offers <span aria-hidden="true">⌄</span></a></li>
+            <li><a href="#">Careers &amp; Education</a></li>
+            <li><a href="#">Banking</a></li>
+            <li><a href="#">Legal Services</a></li>
+            <li><a href="#">Special Features</a></li>
+            <li><a href="#">Press Releases</a></li>
+            <li class="side-separator"></li>
+            <li><a href="#">Sponsored Content <span aria-hidden="true">⌄</span></a></li>
+            <li><a href="#">Classifieds <span aria-hidden="true">⌄</span></a></li>
+            <li><a href="#">Place an Ad - Celebrations</a></li>
+            <li><a href="#">Search Jobs</a></li>
+            <li><a href="#">Search Legal Notices</a></li>
+            <li><a href="#">Advertising <span aria-hidden="true">⌄</span></a></li>
+            <li class="side-separator"></li>
+            <li><a href="#" class="featured-link">Featured</a></li>
+        </ul>
+    </nav>
+</aside>
+
 <header>
     <div class="header-inner">
         <div class="header-top">
+            <label for="menu-toggle" class="mobile-search-toggle" aria-label="Apri menu">⌕</label>
             <a href="#" class="edition-link">Read today's edition</a>
 
             <div class="site-title">
@@ -28,7 +75,7 @@
         </div>
 
         <div class="header-bottom">
-            <a href="#" class="search-link">⌕</a>
+            <label for="menu-toggle" class="search-link" aria-label="Apri menu">⌕</label>
 
             <nav>
                 <ul>
