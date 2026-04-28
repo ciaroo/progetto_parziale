@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800;900&display=swap');
+
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
+    font-family: "Open Sans", sans-serif;
+    background-color: #f5f7fa;
 }
 
 a {
@@ -68,7 +70,7 @@ img {
     margin-bottom: 22px;
     padding: 14px;
     background-color: #f5f6fa;
-    color: #191a1d;
+    color: #212932;
     font-size: 16px;
 }
 
@@ -87,7 +89,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #191a1d;
+    color: #212932;
     font-size: 14px;
     font-weight: 600;
     line-height: 1.8;
@@ -104,7 +106,7 @@ img {
 }
 
 .side-nav .featured-link {
-    color: #58647f;
+    color: #656573;
 }
 
 /* Header */
@@ -112,7 +114,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: #f8f8f8;
+    background-color: #f5f7fa;
 }
 
 .header-inner {
@@ -125,8 +127,8 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid black;
+    padding: 6px 0;
+    border-bottom: 1px solid #212932;
 }
 
 .edition-link,
@@ -139,7 +141,7 @@ header {
 
 .edition-link {
     justify-content: flex-start;
-    color: black;
+    color: #212932;
 }
 
 .mobile-search-toggle {
@@ -151,16 +153,12 @@ header {
     text-align: center;
 }
 
-.site-title a {
-    color: #2760D1;
-}
-
 header h1 {
     margin: 0;
     font-family: UnifrakturMaguntia, cursive;
     font-size: 32px;
     font-weight: 700;
-    color: #2760D1;
+    color: #3067af;
 }
 
 .user-links {
@@ -168,27 +166,30 @@ header h1 {
     justify-content: flex-end;
     gap: 12px;
     font-size: 14px;
-    color: black;
+    color: #212932;
 }
 
 .header-bottom {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    padding: 10px 0;
+    padding: 6px 0;
     text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    color: #212932;
 }
 
 .search-link {
     justify-self: start;
-    font-size: 24px;
-    color: black;
+    font-size: 20px;
+    color: #212932;
     cursor: pointer;
 }
 
 .weather {
     justify-self: end;
-    color: black;
+    color: #212932;
 }
 
 nav ul {
@@ -198,10 +199,6 @@ nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
-}
-
-nav a {
-    color: black;
 }
 
 .site-title a:hover,
@@ -307,6 +304,10 @@ main {
     object-fit: cover;
 }
 
+.more-cards img {
+    width: 100%;
+}
+
 /* Testi */
 .hero h2,
 .latest-news h2,
@@ -317,30 +318,58 @@ main {
 
 .more-news h2 {
     padding-bottom: 20px;
-    border-bottom: 1px solid #b8bec8;
+    border-bottom: 1px solid #212932;
 }
 
 .news-card h3 {
-    margin-top: 10px;
+    margin-top: 4px;
     margin-bottom: 10px;
+    font-size: 18px;
 }
 
 .topic {
+    margin-top: 0;
+    margin-bottom: 4px;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 700;
     text-transform: uppercase;
-    color: grey;
+    color: #4b5972;
+}
+
+.hero .topic {
+    font-size: 20px;
+}
+
+.news-card .topic,
+.more-cards .topic {
+    margin-top: 12px;
 }
 
 .published-time {
     margin-top: 5px;
     font-size: 13px;
-    color: grey;
+    color: #4b5972;
 }
 
 .latest-news article,
 .trending-stories article {
     margin-bottom: 20px;
+}
+
+.latest-news h3,
+.trending-stories h3,
+.more-cards h3{
+    font-size: 18px;
+}
+
+.hero h2 {
+    font-size: 30px;
+}
+
+.latest-news h2,
+.trending-stories h2 {
+    font-size: 20px;
+    text-transform: uppercase;
 }
 
 .more-latest-news {
@@ -354,9 +383,9 @@ main {
 
 /* Footer */
 .site-footer {
-    background-color: #f1f3f6;
+    background-color: #f5f7fa;
     border-top: 1px solid #d7dbe2;
-    color: #191a1d;
+    color: #212932;
 }
 
 .footer-inner {
@@ -400,7 +429,7 @@ main {
 }
 
 .footer-grid a {
-    color: #191a1d;
+    color: #212932;
     font-size: 17px;
 }
 
@@ -432,7 +461,7 @@ main {
 }
 
 .footer-bottom a {
-    color: #191a1d;
+    color: #212932;
 }
 
 @media (max-width: 970px) {
@@ -505,7 +534,7 @@ main {
         width: 24px;
         height: 24px;
         font-size: 24px;
-        color: black;
+        color: #212932;
         cursor: pointer;
     }
 
@@ -575,3 +604,4 @@ main {
         justify-content: flex-start;
     }
 }
+
