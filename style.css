@@ -510,6 +510,11 @@ main {
 
 /* Mobile */
 @media (max-width: 700px) {
+
+    header h1 {
+        font-size: 28px;
+    }
+
     .header-top {
         grid-template-columns: auto 1fr auto;
         gap: 10px;
