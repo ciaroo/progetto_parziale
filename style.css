@@ -550,9 +550,9 @@ main {
     }
 
     .side-menu {
-        top: 53px;
+        top: 49px;
         width: 100vw;
-        height: calc(100vh - 53px);
+        height: calc(100vh - 49px);
         padding: 20px;
     }
 
